@@ -28,6 +28,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #77838f;
   font-family: "Nunito", sans-serif;
 }
 
@@ -2370,15 +2371,20 @@ section {
 }
 
 /* Styling */
-
-
-
-.mobile-input{
-  margin-top: 2%;
-  border-radius: 13px;
-  width: 250px;
-  padding: 11px;
+.input-mobile{
+  width: 200px;
 }
 
+
+.input-mobile,.mb-num{
+  /* border-radius: 15px; */
+  padding: 12px;
+}
+ 
+
+.hero .btn-get-started 
+  {
+  margin-left: -4px;
+}
 
 
