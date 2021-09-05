@@ -12,8 +12,10 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+body { 
+
+  font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Work Sans', sans-serif;
   color: #444444;
 }
 
