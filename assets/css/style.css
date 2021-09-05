@@ -2430,4 +2430,15 @@ section {
 
 .response-msg{
   display: none;
+
+
+}
+
+
+.right-dev span{
+  font-size: 12px;
+}
+.right-dev p{
+  font-size: 13px;
+  margin-bottom: -13px;
 }
