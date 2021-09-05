@@ -2426,3 +2426,8 @@ section {
   color: white;
 
 }
+
+
+.response-msg{
+  display: none;
+}

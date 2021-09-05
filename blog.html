@@ -136,7 +136,7 @@
           <div  class="col-lg-4 respo">
 
             <div class="sidebar">
-              POST/api/upis
+              POST/api/NEFT
             
             </div><!-- End sidebar -->
             <div class="sidebar">
@@ -162,7 +162,143 @@
 
 
 
+
             </div><!-- End sidebar -->
+            <button type="button" class="btn btn-danger" onclick="successfull()">Success</button> <button type="button" class="btn btn-danger" onclick="notFound()">user not found </button> <br>
+           <br> <button type="button" class="btn btn-danger" onclick="pswrdMismatch()">password mismatch</button> <button type="button" class="btn btn-danger" onclick="sameTrans()">Same transaction</button>
+      <br>     <br> <button type="button" class="btn btn-danger" onclick="noEnough()"> No enough balance </button> <button type="button" class="btn btn-danger" onclick="error()">Error occured</button>
+
+
+            <div id="200" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>  
+ 
+ <sub  >
+ 
+ 
+   {<br>
+
+    "flag": true, <br>
+    "data": { <br>
+      "status": "PENDING",   <br>
+      "transaction_ref_no": "1287787877",<br>
+      "order_id": "188787987878", <br>
+      "total_amount": 100, <br>
+      "created_at": "2020-12-08 11:07:26", <br>
+   
+    }, 
+  
+    "message": "{message}", <br>
+    "code": 1 <br>
+  }
+ 
+ 
+ </sub>
+ 
+ 
+ 
+ 
+ 
+             </div><!-- End sidebar -->
+
+            <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>   
+ <sub  >
+  
+   {<br>
+
+    "flag": false, <br>
+    "data": "", <br>
+    "message": "Unauthorized Access.",<br>
+    "code": 0 <br>
+  } 
+ </sub>  </div><!-- End sidebar -->
+
+            <div id="pswrd-mismatch" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>   
+ <sub  >
+  
+   {<br>
+
+    "flag": false, <br>
+    "data": "", <br> 
+    "message": "user password mismatch.",<br>
+    "code": 0 <br>
+  } 
+ </sub>  </div><!-- End sidebar -->
+
+
+            <div id="same-trans" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>   
+ <sub  >
+  
+   {<br>
+
+    "flag": false, <br>
+    "data": "", <br> 
+    "message": "You can\'t do same transaction within two minutes.",
+    "code": 0 <br>
+  } 
+ </sub>  </div><!-- End sidebar -->
+
+            <div id="non-enough" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>   
+ <sub  >
+  
+   {<br>
+
+    "flag": false, <br>
+    "data": "", <br> 
+    "message": "Not enough balance in wallet",
+    "code": 0 <br>
+  } 
+ </sub>  </div><!-- End sidebar -->
+
+            <div id="error" class="sidebar 200-neft-error response-msg" >
+             
+              <span> Response</span>
+           <br> <br>   
+ <sub  >
+  
+   {<br>
+
+    "flag": false, <br>
+    "data": "", <br> 
+    "message": "Something went wrong",
+    "code": 0 <br>
+  } 
+ </sub>  </div><!-- End sidebar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </div><!-- End blog sidebar -->
 

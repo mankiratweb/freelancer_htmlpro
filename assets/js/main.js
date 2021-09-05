@@ -287,3 +287,84 @@
   });
 
 })();
+
+
+
+
+
+
+
+function successfull(){
+  document.getElementById('user-not-found').style.display='none';
+  document.getElementById('pswrd-mismatch').style.display='none';
+  document.getElementById('same-trans').style.display='none';
+  document.getElementById('error').style.display='none';
+  document.getElementById('non-enough').style.display='none';
+  document.getElementById('200').style.display="block";
+
+}
+
+
+function notFound(){
+ document.getElementById('200').style.display='none';
+ document.getElementById('pswrd-mismatch').style.display='none';
+ document.getElementById('non-enough').style.display='none';
+ document.getElementById('same-trans').style.display='none';
+ document.getElementById('error').style.display='none';
+  document.getElementById('user-not-found').style.display='block'
+}
+
+
+
+
+function pswrdMismatch(){
+  document.getElementById('user-not-found').style.display='none';
+  document.getElementById('200').style.display='none';
+  document.getElementById('same-trans').style.display='none';
+  document.getElementById('error').style.display='none';
+  document.getElementById('non-enough').style.display='none';
+  document.getElementById('pswrd-mismatch').style.display='block';
+}
+
+function sameTrans(){
+
+  document.getElementById('user-not-found').style.display='none';
+  document.getElementById('200').style.display='none';
+  document.getElementById('pswrd-mismatch').style.display='none';
+  document.getElementById('non-enough').style.display='none';
+  document.getElementById('error').style.display='none';
+ document.getElementById('same-trans').style.display='block';
+}
+
+
+function noEnough(){
+
+  document.getElementById('user-not-found').style.display='none';
+  document.getElementById('200').style.display='none';
+  document.getElementById('pswrd-mismatch').style.display='none';
+  document.getElementById('same-trans').style.display='none';
+  document.getElementById('error').style.display='none';
+  document.getElementById('non-enough').style.display='block';
+
+
+
+
+
+}
+
+
+
+
+function error(){
+
+  document.getElementById('user-not-found').style.display='none';
+  document.getElementById('200').style.display='none';
+  document.getElementById('pswrd-mismatch').style.display='none';
+  document.getElementById('same-trans').style.display='none';
+  document.getElementById('non-enough').style.display='none';
+
+  document.getElementById('error').style.display='block';
+
+
+
+}
