@@ -2402,12 +2402,16 @@ section {
   color: red;
   position: relative;
   top: -24px;
+  margin-left: 2rem;
   font-size: 11px;
+}
+.entries .left-div p {
+  margin-left: 2rem;
 }
 
 .respo{
   padding-bottom: 33px;
-  background-color: #011f3f !important;
+
 }
 
 .sidebar{
@@ -2442,4 +2446,29 @@ section {
 .right-dev p{
   font-size: 13px;
   margin-bottom: -13px;
+}
+
+.blog .container{
+  margin: 0;
+
+}
+
+
+.main-blog-row{
+
+  width: 100vw;
+}
+
+.main-blog-row .col-lg-2{
+
+  background-color: #011f3f !important;
+  color: white;
+}
+.main-blog-row .col-lg-2 nav ul{
+  margin-top: 70px;
+  display: inline-block;
+}
+.main-blog-row .col-lg-2 nav ul li a{
+  color: white;
+  padding: 2rem;
 }
