@@ -2414,6 +2414,7 @@ section {
   margin-left: auto !important;
   background-color: black;
   color: white;
+   cursor:text;
   width: 100%;
   height: auto !important;
 }
