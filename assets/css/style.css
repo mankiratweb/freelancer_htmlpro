@@ -2392,3 +2392,36 @@ section {
 #logo{
   font-weight: 400;
 }
+
+.entries{
+  display: flex;
+}
+
+
+.entries .left-div span {
+  color: red;
+  position: relative;
+  top: -24px;
+  font-size: 11px;
+}
+
+.respo{
+  background-color: #011f3f !important;
+}
+
+.sidebar{
+  margin-top: 17px !important;
+  margin-left: auto !important;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto !important;
+}
+
+.sidebar span{
+  background-color: rgb(59, 56, 56);
+  width: 100%;
+  padding: 5px 64px;
+  color: white;
+
+}
