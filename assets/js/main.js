@@ -294,18 +294,62 @@
 
 
 
-function successfull(){
-  document.getElementById('user-not-found').style.display='none';
+function successfullNeft(){
+  document.getElementById('user-not-found-neft').style.display='none';
  
-  document.getElementById('200').style.display="block";
+  document.getElementById('200-neft').style.display="block";
 
 }
 
 
-function notFound(){
- document.getElementById('200').style.display='none';
+function notFoundNeft(){
+ document.getElementById('200-neft').style.display='none';
  
-  document.getElementById('user-not-found').style.display='block'
+  document.getElementById('user-not-found-neft').style.display='block'
+}
+
+
+function successfullImps(){
+  document.getElementById('user-not-found-imps').style.display='none';
+ 
+  document.getElementById('200-imps').style.display="block";
+
+}
+
+
+function notFoundImps(){
+ document.getElementById('200-imps').style.display='none';
+ 
+  document.getElementById('user-not-found-imps').style.display='block'
+}
+
+function successfullUpi(){
+  document.getElementById('user-not-found-upi').style.display='none';
+ 
+  document.getElementById('200-upi').style.display="block";
+
+}
+
+
+function notFoundUpi(){
+ document.getElementById('200-upi').style.display='none';
+ 
+  document.getElementById('user-not-found-upi').style.display='block'
+}
+
+
+function successfullPay(){
+  document.getElementById('user-not-found-pay').style.display='none';
+ 
+  document.getElementById('200-pay').style.display="block";
+
+}
+
+
+function notFoundPay(){
+ document.getElementById('200-pay').style.display='none';
+ 
+  document.getElementById('user-not-found-pay').style.display='block'
 }
 
 
