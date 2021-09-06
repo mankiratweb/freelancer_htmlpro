@@ -107,11 +107,11 @@
             <nav id="navbar"  class="navbar">
               <ul>
              
-                <li><a class="nav-link scrollto" href="#">NEFT TRANSFER</a></li>
-                <li><a class="nav-link scrollto" href="#" onclick="impsTransfer()" >IMPS TRANSFER</a></li>
-                <li><a class="nav-link scrollto" href="#portfolio">UPI TRANSFER</a></li>
-                <li><a class="nav-link scrollto" href="#team">PAYTM TRANSFER</a></li>
-                <li><a class="active" href="blog.html">PAYTM WALLET</a></li> 
+                <li><a class="nav-link scrollto" onclick="neftTrans()">NEFT TRANSFER</a></li>
+                <li><a class="nav-link scrollto"   onclick="impsTransfer()" >IMPS TRANSFER</a></li>
+                <li><a class="nav-link scrollto"  onclick="upiTrans()">UPI TRANSFER</a></li>
+            
+                <li><a class="active" onclick="paymentWal()">PAYTM WALLET</a></li> 
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -121,11 +121,12 @@
 
 
           </div>
-          <div class="col-lg-7 entries">
+          <!-- neft center Start  -->
+          <div id='center-neft' class="col-lg-7 entries neft ">
          
             <div class="row ">
               
-            <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div">
+            <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
              <strong>HEADER PARAMETERS</strong> 
               <hr>
               <p>Authorization</p> 
@@ -161,6 +162,10 @@
                 required
               </span>
             </div>
+
+
+
+            
             <div class="col-lg-6 right-dev"><br>
               <hr>
               <span>String</span>
@@ -199,8 +204,72 @@
             <h3>Responses</h3>  
 <hr>
 
+<div class="card">
+  <div class="card-body">
+    <code>
+    URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
+    Transaction Success<br>
+    Transaction Success<br>
 
-<div class="accordion accordion-flush" id="accordionFlushExample">
+ {<br>
+"flag": true,<br>
+"status": "ACCEPTED",<br>
+"transaction_ref_no": 1287787877,<br>
+"order_id": "188787987878"<br>
+"total_amount": "100"<br>
+"created_at": "2020-12-08 11:07:26"<br>
+"message": "Successful disbursal to Bank Account is done"<br>
+"code": "1"<br>
+when password mismatch<br>
+
+ {<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "user password mismatch.",<br>
+"code": "0"<br>
+Same transaction occured<br>
+
+ {<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "You can\'t do same transaction in same time",,<br>
+"code": "0"<br>
+
+No enough balance in wallet<br>
+
+ {<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "Not enough balance in wallet.",",,<br>
+"code": "0"<br>
+
+
+
+
+
+
+
+
+
+
+
+
+    </code>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -283,7 +352,7 @@
       <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
     </div>
   </div>
-</div>
+</div> -->
 
             </div>
 
@@ -292,12 +361,487 @@
            
      
 
-          </div><!-- End blog entries list -->
+          </div><!-- End blog center entries list -->
+<!-- neft End  -->
 
-          <div  class="col-lg-3 respo">
+<!-- imps center start  -->
+<div id='center-imps' class="col-lg-7 entries imps hide ">
+         
+  <div class="row ">
+    
+  <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+   <strong>HEADER IMPS PARAMETERS</strong> 
+    <hr>
+    <p>Authorization</p> 
+  <span calss="required">
+    required
+  </span>  
+    
+    <p>Content-Type</p> 
+    <span calss="required">
+      required
+    </span>
+ <br><br><br>
+ IMPS Transfer 
+ <hr>
+<p>Username</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Key</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Account_no</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Ifsc_code</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Amount</p> 
+    <span calss="required">
+      required
+    </span>
+  </div>
 
-            <div class="sidebar">
-              POST/api/NEFT
+
+
+  
+  <div class="col-lg-6 right-dev"><br>
+    <hr>
+    <span>String</span>
+   <p>API Token value from 'Settings'</p>  
+   <hr>
+    <span>String</span>
+    <p>Example: application/json</p>  
+
+
+   <hr style="margin-top: 124px;">
+   <span>String</span>
+   <p>CitruxPay Email</p>  
+
+   <hr>
+   <span>String</span>
+   <p>Generate From Dashboard</p> 
+    
+   <hr>
+   <span>String</span>
+   <p>
+    Bank Account Number</p> 
+
+   <hr>
+   <span>String</span>
+   <p>Bank IFSC Code</p>  
+
+   <hr>
+   <span>int</span>
+   <p>
+    Amount To Be Transferd</p>  
+   <hr>
+
+  </div>
+
+  </div>
+
+  <div class="row m-2">
+  <h3>Responses</h3>  
+<hr>
+
+<div class="card">
+<div class="card-body">
+<code>
+URL("https://app.citruxpay.com/api/v2/imps-transfer/" <br>
+Transaction Success<br>
+ 
+
+{<br>
+"flag": true,<br>
+"status": "ACCEPTED",<br>
+"transaction_ref_no": 1287787877,<br>
+"order_id": "188787987878"<br>
+"total_amount": "100"<br>
+"created_at": "2020-12-08 11:07:26"<br>
+"message": "Successful disbursal to Bank Account is done"<br>
+"code": "1"<br>
+when password mismatch<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "user password mismatch.",<br>
+"code": "0"<br>
+Same transaction occured<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "You can\'t do same transaction in same time",,<br>
+"code": "0"<br>
+
+No enough balance in wallet<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "Not enough balance in wallet.",",,<br>
+"code": "0"<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</code>
+</div>
+</div>
+
+
+ 
+
+  </div>
+
+ 
+
+ 
+
+
+</div>
+
+
+<!-- Imps center End  -->
+
+
+
+<!-- Upi Tranfer center start  -->
+<div id='center-upi' class="col-lg-7 entries  upi hide ">
+         
+  <div class="row ">
+    
+  <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+   <strong>HEADER PARAMETERS</strong> 
+    <hr>
+    <p>Authorization</p> 
+  <span calss="required">
+    required
+  </span>  
+    
+    <p>Content-Type</p> 
+    <span calss="required">
+      required
+    </span>
+ <br><br><br>
+ REQUEST BODY SCHEMA: application/json
+ <hr>
+<p>Username</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Password</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Account_no</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Ifsc_code</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Amount</p> 
+    <span calss="required">
+      required
+    </span>
+  </div>
+
+
+
+  
+  <div class="col-lg-6 right-dev"><br>
+    <hr>
+    <span>String</span>
+   <p>API Token value from 'Settings'</p>  
+   <hr>
+    <span>String</span>
+    <p>Example: application/json</p>  
+
+
+   <hr style="margin-top: 124px;">
+   <span>String</span>
+   <p>Example: haryy23</p>  
+
+   <hr>
+   <span>String</span>
+   <p>Example: 123@#$</p> 
+    
+   <hr>
+   <span>String</span>
+   <p>Example: 1234569</p> 
+
+   <hr>
+   <span>String</span>
+   <p>Example: AWE3R</p>  
+
+   <hr>
+   <span>int</span>
+   <p>Example: 5000..</p>  
+   <hr>
+
+  </div>
+
+  </div>
+
+  <div class="row m-2">
+  <h3>Responses</h3>  
+<hr>
+
+<div class="card">
+<div class="card-body">
+<code>
+URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
+Transaction Success<br>
+Transaction Success<br>
+
+{<br>
+"flag": true,<br>
+"status": "ACCEPTED",<br>
+"transaction_ref_no": 1287787877,<br>
+"order_id": "188787987878"<br>
+"total_amount": "100"<br>
+"created_at": "2020-12-08 11:07:26"<br>
+"message": "Successful disbursal to Bank Account is done"<br>
+"code": "1"<br>
+when password mismatch<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "user password mismatch.",<br>
+"code": "0"<br>
+Same transaction occured<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "You can\'t do same transaction in same time",,<br>
+"code": "0"<br>
+
+No enough balance in wallet<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "Not enough balance in wallet.",",,<br>
+"code": "0"<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</code>
+</div>
+</div>
+
+
+ 
+
+  </div>
+
+ 
+
+ 
+
+
+</div>
+
+
+<!-- Upi TRansfer center End  -->
+
+
+
+
+<!-- payment center start  -->
+<div  id='center-payment' class="col-lg-7 entries  payment hide ">
+         
+  <div class="row ">
+    
+  <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+   <strong>HEADER PARAMETERS</strong> 
+    <hr>
+    <p>Authorization</p> 
+  <span calss="required">
+    required
+  </span>  
+    
+    <p>Content-Type</p> 
+    <span calss="required">
+      required
+    </span>
+ <br><br><br>
+ REQUEST BODY SCHEMA: application/json
+ <hr>
+<p>Username</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Password</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Account_no</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Ifsc_code</p> 
+    <span calss="required">
+      required
+    </span>
+<p>Amount</p> 
+    <span calss="required">
+      required
+    </span>
+  </div>
+
+
+
+  
+  <div class="col-lg-6 right-dev"><br>
+    <hr>
+    <span>String</span>
+   <p>API Token value from 'Settings'</p>  
+   <hr>
+    <span>String</span>
+    <p>Example: application/json</p>  
+
+
+   <hr style="margin-top: 124px;">
+   <span>String</span>
+   <p>Example: haryy23</p>  
+
+   <hr>
+   <span>String</span>
+   <p>Example: 123@#$</p> 
+    
+   <hr>
+   <span>String</span>
+   <p>Example: 1234569</p> 
+
+   <hr>
+   <span>String</span>
+   <p>Example: AWE3R</p>  
+
+   <hr>
+   <span>int</span>
+   <p>Example: 5000..</p>  
+   <hr>
+
+  </div>
+
+  </div>
+
+  <div class="row m-2">
+  <h3>Responses</h3>  
+<hr>
+
+<div class="card">
+<div class="card-body">
+<code>
+URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
+Transaction Success<br>
+Transaction Success<br>
+
+{<br>
+"flag": true,<br>
+"status": "ACCEPTED",<br>
+"transaction_ref_no": 1287787877,<br>
+"order_id": "188787987878"<br>
+"total_amount": "100"<br>
+"created_at": "2020-12-08 11:07:26"<br>
+"message": "Successful disbursal to Bank Account is done"<br>
+"code": "1"<br>
+when password mismatch<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "user password mismatch.",<br>
+"code": "0"<br>
+Same transaction occured<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "You can\'t do same transaction in same time",,<br>
+"code": "0"<br>
+
+No enough balance in wallet<br>
+
+{<br>
+"flag": false,<br>
+"data": "",<br>
+"message": "Not enough balance in wallet.",",,<br>
+"code": "0"<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</code>
+</div>
+</div>
+
+
+ 
+
+  </div>
+
+ 
+
+ 
+
+
+</div>
+
+
+<!-- payment center End  -->
+
+
+
+
+
+
+
+
+
+
+<!-- neft Start  -->
+
+          <div id='right-neft'  class="col-lg-3 respo   neft">
+
+            <div class="sidebar neft ">
+              post/api/NEFT
             
             </div><!-- End sidebar -->
             <div class="sidebar">
@@ -325,12 +869,10 @@
 
 
             </div><!-- End sidebar -->
-            <button type="button" class="btn btn-success" onclick="successfull()">200</button> <button type="button" class="btn btn-danger" onclick="notFound()">404 </button> <br>
-           <br> <button type="button" class="btn btn-danger" onclick="pswrdMismatch()">401</button> <button type="button" class="btn btn-danger" onclick="sameTrans()">Same transaction</button>
-      <br>     <br> <button type="button" class="btn btn-danger" onclick="noEnough()"> No enough balance </button> <button type="button" class="btn btn-danger" onclick="error()">Error occured</button>
+            <button type="button" class="btn btn-success" onclick="successfull()">Response</button> <button type="button" class="btn btn-danger" onclick="notFound()">Error </button> <br>
+       
 
-
-            <div id="200" class="sidebar 200-neft-error  " >
+            <div id="200" class="sidebar 200-neft-error " >
              
               <span> Response</span>
            <br> <br>  
@@ -339,20 +881,14 @@
  
  
    {<br>
-
-    "flag": true, <br>
-    "data":   {<br>
-      "username":"haryy23",   <br>
-      "password":"123@#$",  <br>
+ 
+      "username": "email",  <br>
+      "key": "hashkey",  <br>
       "account_no": "1234569", <br>
-      "ifsc_code": "AWE3R", <br>
-       "amount": 5000 ,<br>
+      "ifsc_code": "188787987878"<br>
+      "amount": "100.00"<br>
     
-      } ,<br>
-  
-    "message": "{message}", <br>
-    "code": 1 <br>
-  }
+      }  
  
  
  </sub>
@@ -378,72 +914,8 @@
   } 
  </sub>  </div><!-- End sidebar -->
 
-            <div id="pswrd-mismatch" class="sidebar 200-neft-error response-msg" >
-             
-              <span> Response</span>
-           <br> <br>   
- <sub  >
-  
-   {<br>
-
-    "flag": false, <br>
-    "data": "", <br> 
-    "message": "user password mismatch",<br>
-    "code": 0 <br>
-  } 
- </sub>  </div><!-- End sidebar -->
-
-
-            <div id="same-trans" class="sidebar 200-neft-error response-msg" >
-             
-              <span> Response</span>
-           <br> <br>   
- <sub  >
-  
-   {<br>
-
-    "flag": false, <br>
-    "data": "", <br> 
-    "message": "You can\'t do same transaction within two minutes.",<br>
-    "code": 0 <br>
-  } 
- </sub>  </div><!-- End sidebar -->
-
-            <div id="non-enough" class="sidebar 200-neft-error response-msg" >
-             
-              <span> Response</span>
-           <br> <br>   
- <sub  >
-  
-   {<br>
-
-    "flag": false, <br>
-    "data": "", <br> 
-    "message": "Not enough balance in wallet", <br>
-    "code": 0 <br>
-  } 
- </sub>  </div><!-- End sidebar -->
-
-            <div id="error" class="sidebar 200-neft-error response-msg" >
-             
-              <span> Response</span>
-           <br> <br>   
- <sub  >
-  
-   {<br>
-
-    "flag": false, <br>
-    "data": "", <br> 
-    "message": "Something went wrong",<br>
-    "code": 0 <br>
-  } 
- </sub>  </div><!-- End sidebar -->
-
-
-
-
-
-
+            
+   
 
 
 
@@ -462,6 +934,302 @@
 
 
           </div><!-- End blog sidebar -->
+<!-- neft End  -->
+
+
+
+
+<!-- imps start  -->
+
+
+<div id='right-imps'  class="col-lg-3 respo imps hide">
+
+  <div class="sidebar neft ">
+    post/api/NEFT
+  
+  </div><!-- End sidebar -->
+  <div class="sidebar">
+   Content Type <br> <br>
+   <span>apllication json</span>
+<br> <br>  
+
+<sub>
+
+
+{<br>
+"username":"haryy23",   <br>
+"password":"123@#$",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "AWE3R", <br>
+"amount": 5000 ,<br>
+
+}
+
+
+</sub>
+
+
+
+
+
+  </div><!-- End sidebar -->
+  <button type="button" class="btn btn-success" onclick="successfull()">Response</button> <button type="button" class="btn btn-danger" onclick="notFound()">Error </button> <br>
+
+
+  <div id="200" class="sidebar 200-neft-error " >
+   
+    <span> Response</span>
+ <br> <br>  
+
+<sub  >
+
+
+{<br>
+
+"username": "email",  <br>
+"key": "hashkey",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "188787987878"<br>
+"amount": "100.00"<br>
+
+}  
+
+
+</sub>
+
+
+
+
+
+   </div><!-- End sidebar -->
+
+  <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
+   
+    <span> Response</span>
+ <br> <br>   
+<sub  >
+
+{<br>
+
+"flag": false, <br>
+"data": "", <br>
+"message": "Unauthorized Access",<br>
+"code": 0 <br>
+} 
+</sub>  </div><!-- End sidebar -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- imps end  -->
+
+
+<!-- Upi Tranfer Start  -->
+
+<div id='right-upi' class="col-lg-3 respo  upi hide">
+
+  <div class="sidebar neft ">
+    post/api/NEFT
+  
+  </div><!-- End sidebar -->
+  <div class="sidebar">
+   Content Type <br> <br>
+   <span>apllication json</span>
+<br> <br>  
+
+<sub>
+
+
+{<br>
+"username":"haryy23",   <br>
+"password":"123@#$",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "AWE3R", <br>
+"amount": 5000 ,<br>
+
+}
+
+
+</sub>
+
+
+
+
+
+  </div><!-- End sidebar -->
+  <button type="button" class="btn btn-success" onclick="successfull()">Response</button> <button type="button" class="btn btn-danger" onclick="notFound()">Error </button> <br>
+
+
+  <div id="200" class="sidebar 200-neft-error " >
+   
+    <span> Response</span>
+ <br> <br>  
+
+<sub  >
+
+
+{<br>
+
+"username": "email",  <br>
+"key": "hashkey",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "188787987878"<br>
+"amount": "100.00"<br>
+
+}  
+
+
+</sub>
+
+
+
+
+
+   </div><!-- End sidebar -->
+
+  <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
+   
+    <span> Response</span>
+ <br> <br>   
+<sub  >
+
+{<br>
+
+"flag": false, <br>
+"data": "", <br>
+"message": "Unauthorized Access",<br>
+"code": 0 <br>
+} 
+</sub>  </div><!-- End sidebar -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- End blog sidebar -->
+<!-- Upi Tranfer End  -->
+
+
+
+<!-- payment Start  -->
+
+<div id='right-payment' class="col-lg-3 respo  payment hide">
+
+  <div class="sidebar neft ">
+    post/api/NEFT
+  
+  </div><!-- End sidebar -->
+  <div class="sidebar">
+   Content Type <br> <br>
+   <span>apllication json</span>
+<br> <br>  
+
+<sub>
+
+
+{<br>
+"username":"haryy23",   <br>
+"password":"123@#$",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "AWE3R", <br>
+"amount": 5000 ,<br>
+
+}
+
+
+</sub>
+
+
+
+
+
+  </div><!-- End sidebar -->
+  <button type="button" class="btn btn-success" onclick="successfull()">Response</button> <button type="button" class="btn btn-danger" onclick="notFound()">Error </button> <br>
+
+
+  <div id="200" class="sidebar 200-neft-error " >
+   
+    <span> Response</span>
+ <br> <br>  
+
+<sub  >
+
+
+{<br>
+
+"username": "email",  <br>
+"key": "hashkey",  <br>
+"account_no": "1234569", <br>
+"ifsc_code": "188787987878"<br>
+"amount": "100.00"<br>
+
+}  
+
+
+</sub>
+
+
+
+
+
+   </div><!-- End sidebar -->
+
+  <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
+   
+    <span> Response</span>
+ <br> <br>   
+<sub  >
+
+{<br>
+
+"flag": false, <br>
+"data": "", <br>
+"message": "Unauthorized Access",<br>
+"code": 0 <br>
+} 
+</sub>  </div><!-- End sidebar -->
+
+ 
+
+</div><!-- End blog sidebar -->
+<!-- Payment End  -->
+
+
+
+
 
           
 

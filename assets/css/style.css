@@ -2487,3 +2487,10 @@ section {
   cursor: pointer;
   color: red;
 }
+
+.hide{
+  display: none;
+}
+.neft{
+  /* display: block; */
+}

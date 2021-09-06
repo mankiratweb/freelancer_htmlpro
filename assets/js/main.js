@@ -296,10 +296,7 @@
 
 function successfull(){
   document.getElementById('user-not-found').style.display='none';
-  document.getElementById('pswrd-mismatch').style.display='none';
-  document.getElementById('same-trans').style.display='none';
-  document.getElementById('error').style.display='none';
-  document.getElementById('non-enough').style.display='none';
+ 
   document.getElementById('200').style.display="block";
 
 }
@@ -307,68 +304,14 @@ function successfull(){
 
 function notFound(){
  document.getElementById('200').style.display='none';
- document.getElementById('pswrd-mismatch').style.display='none';
- document.getElementById('non-enough').style.display='none';
- document.getElementById('same-trans').style.display='none';
- document.getElementById('error').style.display='none';
+ 
   document.getElementById('user-not-found').style.display='block'
 }
 
 
+ 
 
-
-function pswrdMismatch(){
-  document.getElementById('user-not-found').style.display='none';
-  document.getElementById('200').style.display='none';
-  document.getElementById('same-trans').style.display='none';
-  document.getElementById('error').style.display='none';
-  document.getElementById('non-enough').style.display='none';
-  document.getElementById('pswrd-mismatch').style.display='block';
-}
-
-function sameTrans(){
-
-  document.getElementById('user-not-found').style.display='none';
-  document.getElementById('200').style.display='none';
-  document.getElementById('pswrd-mismatch').style.display='none';
-  document.getElementById('non-enough').style.display='none';
-  document.getElementById('error').style.display='none';
- document.getElementById('same-trans').style.display='block';
-}
-
-
-function noEnough(){
-
-  document.getElementById('user-not-found').style.display='none';
-  document.getElementById('200').style.display='none';
-  document.getElementById('pswrd-mismatch').style.display='none';
-  document.getElementById('same-trans').style.display='none';
-  document.getElementById('error').style.display='none';
-  document.getElementById('non-enough').style.display='block';
-
-
-
-
-
-}
-
-
-
-
-function error(){
-
-  document.getElementById('user-not-found').style.display='none';
-  document.getElementById('200').style.display='none';
-  document.getElementById('pswrd-mismatch').style.display='none';
-  document.getElementById('same-trans').style.display='none';
-  document.getElementById('non-enough').style.display='none';
-
-  document.getElementById('error').style.display='block';
-
-
-
-}
-
+ 
 
 
 
@@ -376,3 +319,98 @@ function dataGov(){
   document.getElementById('data-respo-val').style.display='block';
   document.getElementById('data-respo-key').style.display='block';
 }
+
+
+
+
+
+
+
+
+
+
+// nav bar 
+
+function neftTrans(){
+
+document.getElementById('right-neft').style.display='block';
+document.getElementById('center-neft').style.display='block';
+   
+document.getElementById('center-imps').style.display='none';
+document.getElementById('right-imps').style.display='none';
+
+document.getElementById('center-upi').style.display='none';
+  document.getElementById('right-upi').style.display='none';
+
+  document.getElementById('center-payment').style.display='none';
+  document.getElementById('right-payment').style.display='none';
+
+
+}
+
+
+
+function impsTransfer(){
+
+  document.getElementById('center-imps').style.display='block';
+  document.getElementById('right-imps').style.display='block';
+
+
+
+
+  document.getElementById('right-neft').style.display='none';
+  document.getElementById('center-neft').style.display='none';
+
+  document.getElementById('center-upi').style.display='none';
+  document.getElementById('right-upi').style.display='none';
+
+  document.getElementById('center-payment').style.display='none';
+  document.getElementById('right-payment').style.display='none';
+
+
+}
+
+
+function upiTrans(){
+
+
+  document.getElementById('center-upi').style.display='block';
+  document.getElementById('right-upi').style.display='block';
+ 
+  document.getElementById('center-payment').style.display='none';
+  document.getElementById('right-payment').style.display='none';
+
+  document.getElementById('right-neft').style.display='none';
+  document.getElementById('center-neft').style.display='none';
+
+
+  document.getElementById('center-imps').style.display='none';
+  document.getElementById('right-imps').style.display='none';
+  
+  
+
+}
+
+function paymentWal(){
+ 
+
+  document.getElementById('center-payment').style.display='block';
+  document.getElementById('right-payment').style.display='block';
+
+
+  document.getElementById('center-upi').style.display='none';
+  document.getElementById('right-upi').style.display='none';
+ 
+
+  document.getElementById('right-neft').style.display='none';
+  document.getElementById('center-neft').style.display='none';
+
+
+  document.getElementById('center-imps').style.display='none';
+  document.getElementById('right-imps').style.display='none';
+  
+
+}
+
+
+

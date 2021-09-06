@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://tangerine-lemon.cloudvent.net/#apibooks_get -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>
+							CitruxPay - API Documentation
+								
+							</title>
+<meta name="generator" content="Jekyll v3.7.2">
+<meta property="og:title" content="API Docs">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Jekyll template for API documentation.">
+<meta property="og:description" content="Jekyll template for API documentation.">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:site_name" content="Aviator">
+<script type="application/ld+json">
+{"name":"Aviator","description":"Jekyll template for API documentation.","@type":"WebSite","url":"https://example.com/","headline":"API Docs","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+		<link rel="stylesheet" href="./api_files/67ce0bd058d7803c000b297982b62766.css" data-cms-original-href="/css/style.css">
+		<link rel="icon" type="image/png" href="https://d1qmdf3vop2l07.cloudfront.net/tangerine-lemon.cloudvent.net/compressed/_min_/95a6dec844b9092cf68cc398566451e9.png" data-cms-original-href="/favicon.png">
+
+		
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async="" src="./api_files/analytics.js.download"></script>
+		
+
+		<script src="./api_files/jquery.min.js.download"></script>
+		<script src="./api_files/8c69f529ee749d8536d3db2371af07ab.js.download" data-cms-original-src="/js/main.js"></script>
+	</head>
+	<body>
+		 <!-- Navbar text is dark and background is light -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          Light color background
+      </a>
+    </nav>
+ 
+    <nav class="navbar navbar-light bg-warning">
+        <a class="navbar-brand" href="#">
+          Warning color background
+      </a>
+    </nav>
+		<header>
+	
+
+			<div id="sidebar" class="sidebar">
+	
+	
+		
+	
+
+	
+		
+			<section>
+				<h6>APIs</h6>
+				<ul>
+					
+					
+						<li>
+							<a href="#imps_transfer" class="">
+								IMPS Transfer
+								<span class="endpoint post"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#neft_transfer" class="">
+								NEFT Transfer
+								<span class="endpoint post"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#upi_transfer" class="active">
+								UPI Transfer
+								<span class="endpoint post"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#paytm_transfer" class="">
+								Paytm Wallet
+								<span class="endpoint post"></span>
+							</a>
+						</li>
+					
+						
+					
+				</ul>
+			</section>
+		
+	
+</div>
+
+
+			<p class="copyright">
+				<a href="">
+				Documentation By CitruxPay
+				</a>
+			</p>
+		</header>
+		<div class="main" data-cms-content-wrapper="/_layouts/default.html">
+			
+
+	
+	
+
+	
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationgetting_started">
+						Getting Started
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/getting_started.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<p>Welcome to our API.</p>
+
+<p>This API document is designed for those interested in developing for our platform.</p>
+
+<p>This API is still under development and will evolve.</p>
+
+<p class="success">You’ll succeed if you do this.</p>
+
+<p class="info">Here’s some useful information.</p>
+
+<p class="warning">Something may not happen if you try and do this.</p>
+
+<p class="error">Something bad will happen if you do this.</p>
+
+
+				
+			</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationauthentication">
+						Authentication
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/authentication.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<p>You need to be authenticated for all API requests. You can generate an API key in your developer dashboard.</p>
+
+<p>Add the API key to all requests as a GET parameter.</p>
+
+<p class="error">Nothing will work unless you include this API key</p>
+
+
+				
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">JQuery</a></li><li><a href="https://tangerine-lemon.cloudvent.net/#" class="">Curl</a></li></ul><div title="JQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code> <span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/books/"</span><span class="p">,</span> <span class="p">{</span> <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+ <span class="p">});</span>
+</code></pre></div></div><div title="Curl" class="language-bash highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code> curl http://api.myapp.com/books?token<span class="o">=</span>YOUR_APP_KEY
+</code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationerrors">
+						Errors
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/errors.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>OK</td>
+      <td>Success</td>
+    </tr>
+    <tr>
+      <td>201</td>
+      <td>Created</td>
+      <td>Creation Successful</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>Bad Request</td>
+      <td>We could not process that action</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>Forbidden</td>
+      <td>We couldn’t authenticate you</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All errors will return JSON in the following format:</p>
+
+
+				
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">Response</a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message here"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div></div>
+
+								
+						
+			</section>
+			
+		</section>
+	
+
+	
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="imps_transfer">
+						IMPS Transfer
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/books_list.md">Edit</a>
+				</h3>
+		
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>username</dt>
+										<dd>CitruxPay Email</dd>
+					
+										<dt>key</dt>
+										<dd>Generate From Dashboard</dd>
+
+										<dt>account_no</dt>
+										<dd>Bank Account Number</dd>
+					
+										<dt>ifsc_code</dt>
+										<dd>Bank IFSC Code</dd>
+										<dt>amount</dt>
+										<dd>Amount To Be Transferd</dd>
+								
+						</dl>
+				
+
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Response</a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href=""></a></li></ul><div title="jQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="nx"></span><span class="p"></span><span class="kd">URL</span><span class="p">(</span><span class="s2">"https://app.citruxpay.com/api/v2/imps-transfer/"</span>
+</span><p>Transaction Success</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">true</span><span class="p">,</span><span class="w">
+</span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCEPTED"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"transaction_ref_no"</span><span class="p">:</span><span class="w"> </span><span class="mf">1287787877</span><span class="p">,</span><span class="w">
+</span><span class="s2">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+</span><span class="s2">"total_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="w">
+</span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-12-08 11:07:26"</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successful disbursal to Bank Account is done"</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><p>when password mismatch</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"user password mismatch."</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><p>Same transaction occured</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"You can\'t do same transaction in same time",</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><p>No enough balance in wallet</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"Not enough balance in wallet.",",</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+
+</code></pre></div></div><div title="Curl" class="language-bash highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>curl http://sampleapi.readme.com/orders?key<span class="o">=</span>YOUR_APP_KEY
+</code></pre></div></div></div>
+
+								
+								
+
+
+
+
+								
+								
+
+
+
+
+								
+								
+
+
+
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">Request</a></li><li><a href="https://tangerine-lemon.cloudvent.net/#"></a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w"></span>
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="mi">"email"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hashkey"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"account_no": "</span><span class="p">:</span><span class="w"> </span><span class="mf">"1287787877"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ifsc_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+	</span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.00"</span><span class="w">
+	
+
+	
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="neft_transfer">
+						NEFT Transfer
+						
+							<span class="endpoint post"></span>
+						
+					</a>
+	
+				</h3>
+				
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+							<dt>username</dt>
+							<dd>CitruxPay Email</dd>
+		
+							<dt>key</dt>
+							<dd>Generate From Dashboard</dd>
+
+							<dt>account_no</dt>
+							<dd>Bank Account Number</dd>
+		
+							<dt>ifsc_code</dt>
+							<dd>Bank IFSC Code</dd>
+							<dt>amount</dt>
+							<dd>Amount To Be Transferd</dd>
+								
+						</dl>
+				
+
+			
+
+				
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Response</a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href=""></a></li></ul><div title="jQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="nx"></span><span class="p"></span><span class="kd">URL</span><span class="p">(</span><span class="s2">"https://app.citruxpay.com/api/v2/neft-transfer/"</span>
+</span><p>Transaction Success</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">true</span><span class="p">,</span><span class="w">
+</span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCEPTED"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"transaction_ref_no"</span><span class="p">:</span><span class="w"> </span><span class="mf">1287787877</span><span class="p">,</span><span class="w">
+</span><span class="s2">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+</span><span class="s2">"total_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="w">
+</span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-12-08 11:07:26"</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successful disbursal to Bank Account is done"</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+
+
+
+</span><p>when password mismatch</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"user password mismatch."</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><p>Same transaction occured</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"You can\'t do same transaction in same time",</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+
+</span><p>No enough balance in wallet</p> <span class="p">{</span><span class="w">
+</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"Not enough balance in wallet.",",</span><span class="p">,</span><span class="w">
+</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+
+</code></pre></div></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">Response</a></li><li><a href="https://tangerine-lemon.cloudvent.net/#">Error</a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="mi">"email"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hashkey"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"account_no": "</span><span class="p">:</span><span class="w"> </span><span class="mf">"1287787877"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"ifsc_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+</span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.00"</span><span class="w">
+
+</span></code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="upi_transfer">
+						UPI Transfer
+						
+						
+						
+					</a>
+				</h3>
+				
+
+				<h6>Parameters</h6>
+				<dl>
+						
+					<dt>username</dt>
+					<dd>CitruxPay Email</dd>
+
+					<dt>key</dt>
+					<dd>Generate From Dashboard</dd>
+
+					<dt>beneficiaryVPA</dt>
+					<dd>UPI ID</dd>
+					<dt>amount</dt>
+					<dd>Amount To Be Transfered</dd>
+						
+				</dl>
+
+
+				<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Response</a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href=""></a></li></ul><div title="jQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="nx"></span><span class="p"></span><span class="kd">URL</span><span class="p">(</span><span class="s2">"https://app.citruxpay.com/api/v2/upi-transfer/"</span>
+				</span><p>Transaction Success</p> <span class="p">{</span><span class="w">
+				</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">true</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCEPTED"</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"transaction_ref_no"</span><span class="p">:</span><span class="w"> </span><span class="mf">1287787877</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+				</span><span class="s2">"total_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="w">
+				</span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-12-08 11:07:26"</span><span class="w">
+				</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successful disbursal to Bank Account is done"</span><span class="w">
+				</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+				</span><p>when password mismatch</p> <span class="p">{</span><span class="w">
+				</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"user password mismatch."</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+				</span><p>Same transaction occured</p> <span class="p">{</span><span class="w">
+				</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"You can\'t do same transaction in same time",</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+				</span><p>No enough balance in wallet</p> <span class="p">{</span><span class="w">
+				</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"Not enough balance in wallet.",",</span><span class="p">,</span><span class="w">
+				</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+             </code></pre></div></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Request</a></li><li><a href=""></a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="mi">"email"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hashkey"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"beneficiaryVPA": "</span><span class="p">:</span><span class="w"> </span><span class="mf">"test@citruxpay"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.00"</span><span class="w">
+</span></code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="paytm_transfer">
+						PAYTM Transfer
+						
+							<span class="endpoint post"></span>
+						
+					</a>
+				</h3>
+				
+
+						<h6>Parameters</h6>
+						<dl>
+								
+							<dt>username</dt>
+							<dd>CitruxPay Email</dd>
+		
+							<dt>key</dt>
+							<dd>Generate From Dashboard</dd>
+		
+							<dt>beneficiaryPhoneNo</dt>
+							<dd>Paytm Number</dd>
+							<dt>amount</dt>
+							<dd>Amount To Be Transfered</dd>
+								
+						</dl>
+				
+
+				<p>Update an existing book in your collection.</p>
+
+
+				
+						
+								
+
+
+	<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Response</a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href=""></a></li></ul><div title="jQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="nx"></span><span class="p"></span><span class="kd">URL</span><span class="p">(</span><span class="s2">"https://app.citruxpay.com/api/v2/paytm-transfer/"</span>
+	</span><p>Transaction Success</p> <span class="p">{</span><span class="w">
+	</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">true</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCEPTED"</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"transaction_ref_no"</span><span class="p">:</span><span class="w"> </span><span class="mf">1287787877</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188787987878"</span><span class="w">
+	</span><span class="s2">"total_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="w">
+	</span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-12-08 11:07:26"</span><span class="w">
+	</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successful disbursal to Bank Account is done"</span><span class="w">
+	</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+	</span><p>when password mismatch</p> <span class="p">{</span><span class="w">
+	</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"user password mismatch."</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+	</span><p>Same transaction occured</p> <span class="p">{</span><span class="w">
+	</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"You can\'t do same transaction in same time",</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+	</span><p>No enough balance in wallet</p> <span class="p">{</span><span class="w">
+	</span><span class="s2">"flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">false</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="mf">"Not enough balance in wallet.",",</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+ </code></pre></div></div></div>
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+						<div class="code-viewer"><ul class="languages"><li><a href="" class="active">Request</a></li><li><a href=""></a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+						</span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="mi">"email"</span><span class="p">,</span><span class="w">
+						</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paytm Number"</span><span class="p">,</span><span class="w">
+						</span><span class="s2">"beneficiaryPhoneNo": "</span><span class="p">:</span><span class="w"> </span><span class="mf">"test@citruxpay"</span><span class="p">,</span><span class="w">
+						</span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.00"</span><span class="w">
+						</span></code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apibooks_delete">
+						/books/:id
+						
+							<span class="endpoint delete"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/books_delete.md">Edit</a>
+				</h3>
+				
+					<p class="description">Deletes a book</p>
+				
+
+				
+
+				<p>Deletes a book in your collection.</p>
+
+
+				
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">jQuery</a></li></ul><div title="jQuery" class="language-javascript highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://api.myapp.com/books/3"</span><span class="p">,</span>
+  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
+  <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span>
+  <span class="p">},</span>
+  <span class="s2">"success"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div class="code-viewer"><ul class="languages"><li><a href="https://tangerine-lemon.cloudvent.net/#" class="active">Response</a></li><li><a href="https://tangerine-lemon.cloudvent.net/#">Error</a></li></ul><div title="Response" class="language-json highlighter-rouge" style="display: block;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deleted"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div><div title="Error" class="language-json highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Book doesn't exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div></div>
+
+						
+								
+
+
+
+
+						
+				</section>
+			
+		</section>
+	
+
+
+		</div>
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	
+
+</body></html>
