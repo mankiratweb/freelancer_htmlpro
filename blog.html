@@ -127,6 +127,7 @@
             <div class="row ">
               
             <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+              <h1>NEFT TRANSFER</h1>
              <strong>HEADER PARAMETERS</strong> 
               <hr>
               <p>Authorization</p> 
@@ -166,34 +167,36 @@
 
 
             
-            <div class="col-lg-6 right-dev"><br>
-              <hr>
+            <div class="col-lg-6 right-dev"><br><br> <br> <br>
+           
               <span>String</span>
-             <p>API Token value from 'Settings'</p>  
+             <p>API Token value from 'Settings'</p>  <br>
              <hr>
               <span>String</span>
               <p>Example: application/json</p>  
+              <hr>
           
          
-             <hr style="margin-top: 124px;">
+          <br><br><br><br>
              <span>String</span>
-             <p>Example: haryy23</p>  
+             <p> CitruxPay Email</p>  
          
              <hr>
              <span>String</span>
-             <p>Example: 123@#$</p> 
+             <p>Generate From Dashboard</p> 
               
              <hr>
              <span>String</span>
-             <p>Example: 1234569</p> 
+             <p>
+              Bank Account Number</p> 
           
              <hr>
              <span>String</span>
-             <p>Example: AWE3R</p>  
+             <p>Bank IFSC Code</p>  
          
              <hr>
              <span>int</span>
-             <p>Example: 5000..</p>  
+             <p> Amount To Be Transferd</p>  
              <hr>
 
             </div>
@@ -370,7 +373,8 @@ No enough balance in wallet<br>
   <div class="row ">
     
   <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
-   <strong>HEADER IMPS PARAMETERS</strong> 
+    <h1>IMPS TRANSFER</h1>
+   <strong>HEADER PARAMETERS</strong> 
     <hr>
     <p>Authorization</p> 
   <span calss="required">
@@ -382,7 +386,7 @@ No enough balance in wallet<br>
       required
     </span>
  <br><br><br>
- IMPS Transfer 
+ REQUEST BODY SCHEMA: application/json
  <hr>
 <p>Username</p> 
     <span calss="required">
@@ -410,15 +414,16 @@ No enough balance in wallet<br>
 
   
   <div class="col-lg-6 right-dev"><br>
-    <hr>
+    <br> <br> <br> <br>
     <span>String</span>
    <p>API Token value from 'Settings'</p>  
    <hr>
     <span>String</span>
     <p>Example: application/json</p>  
+<hr>
 
-
-   <hr style="margin-top: 124px;">
+<br><br><br> <br>
+ 
    <span>String</span>
    <p>CitruxPay Email</p>  
 
@@ -526,6 +531,7 @@ No enough balance in wallet<br>
   <div class="row ">
     
   <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+    <h1>UPI TRANSFER</h1>
    <strong>HEADER PARAMETERS</strong> 
     <hr>
     <p>Authorization</p> 
@@ -544,15 +550,11 @@ No enough balance in wallet<br>
     <span calss="required">
       required
     </span>
-<p>Password</p> 
+<p>Key</p> 
     <span calss="required">
       required
     </span>
-<p>Account_no</p> 
-    <span calss="required">
-      required
-    </span>
-<p>Ifsc_code</p> 
+<p>BeneficiaryVPA</p> 
     <span calss="required">
       required
     </span>
@@ -560,13 +562,14 @@ No enough balance in wallet<br>
     <span calss="required">
       required
     </span>
+ 
   </div>
 
 
 
   
   <div class="col-lg-6 right-dev"><br>
-    <hr>
+  <br><br><br><br>
     <span>String</span>
    <p>API Token value from 'Settings'</p>  
    <hr>
@@ -574,26 +577,25 @@ No enough balance in wallet<br>
     <p>Example: application/json</p>  
 
 
-   <hr style="margin-top: 124px;">
+   <hr><br><br><br><br>
    <span>String</span>
-   <p>Example: haryy23</p>  
+   <p>CitruxPay Email</p>  
 
    <hr>
    <span>String</span>
-   <p>Example: 123@#$</p> 
+   <p>Generate From Dashboard</p> 
     
    <hr>
    <span>String</span>
-   <p>Example: 1234569</p> 
+   <p>
+    UPI ID</p> 
 
    <hr>
    <span>String</span>
-   <p>Example: AWE3R</p>  
+   <p>Amount To Be Transfered</p>  
 
    <hr>
-   <span>int</span>
-   <p>Example: 5000..</p>  
-   <hr>
+   
 
   </div>
 
@@ -606,9 +608,9 @@ No enough balance in wallet<br>
 <div class="card">
 <div class="card-body">
 <code>
-URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
+URL("https://app.citruxpay.com/api/v2/upi-transfer/"<br>
 Transaction Success<br>
-Transaction Success<br>
+ 
 
 {<br>
 "flag": true,<br>
@@ -681,6 +683,7 @@ No enough balance in wallet<br>
   <div class="row ">
     
   <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div ">
+    <h1>PAYTM WALLET</h1>
    <strong>HEADER PARAMETERS</strong> 
     <hr>
     <p>Authorization</p> 
@@ -699,18 +702,15 @@ No enough balance in wallet<br>
     <span calss="required">
       required
     </span>
-<p>Password</p> 
+<p>Key</p> 
     <span calss="required">
       required
     </span>
-<p>Account_no</p> 
+<p>BeneficiaryPhoneNo</p> 
     <span calss="required">
       required
     </span>
-<p>Ifsc_code</p> 
-    <span calss="required">
-      required
-    </span>
+ 
 <p>Amount</p> 
     <span calss="required">
       required
@@ -721,7 +721,7 @@ No enough balance in wallet<br>
 
   
   <div class="col-lg-6 right-dev"><br>
-    <hr>
+   <br><br><br><br>
     <span>String</span>
    <p>API Token value from 'Settings'</p>  
    <hr>
@@ -729,27 +729,26 @@ No enough balance in wallet<br>
     <p>Example: application/json</p>  
 
 
-   <hr style="margin-top: 124px;">
+   <hr >
+   <br><br><br><br>
    <span>String</span>
-   <p>Example: haryy23</p>  
+   <p>CitruxPay Email</p>  
 
    <hr>
    <span>String</span>
-   <p>Example: 123@#$</p> 
+   <p>
+    Generate From Dashboard</p> 
     
    <hr>
    <span>String</span>
-   <p>Example: 1234569</p> 
+   <p>Paytm Number</p> 
 
    <hr>
    <span>String</span>
-   <p>Example: AWE3R</p>  
+   <p>Amount To Be Transfered</p> 
 
    <hr>
-   <span>int</span>
-   <p>Example: 5000..</p>  
-   <hr>
-
+   
   </div>
 
   </div>
@@ -761,9 +760,9 @@ No enough balance in wallet<br>
 <div class="card">
 <div class="card-body">
 <code>
-URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
+URL("https://app.citruxpay.com/api/v2/paytm-transfer/" <br>
 Transaction Success<br>
-Transaction Success<br>
+ 
 
 {<br>
 "flag": true,<br>
@@ -853,11 +852,11 @@ No enough balance in wallet<br>
 
 
   {<br>
-    "username":"haryy23",   <br>
-    "password":"123@#$",  <br>
-    "account_no": "1234569", <br>
-    "ifsc_code": "AWE3R", <br>
-     "amount": 5000 ,<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
   
     }
 
@@ -874,21 +873,20 @@ No enough balance in wallet<br>
 
             <div id="200" class="sidebar 200-neft-error " >
              
-              <span> Response</span>
-           <br> <br>  
+               
+            
  
  <sub  >
  
  
-   {<br>
- 
-      "username": "email",  <br>
-      "key": "hashkey",  <br>
-      "account_no": "1234569", <br>
-      "ifsc_code": "188787987878"<br>
-      "amount": "100.00"<br>
-    
-      }  
+  {<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
+  
+    } 
  
  
  </sub>
@@ -901,8 +899,7 @@ No enough balance in wallet<br>
 
             <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
              
-              <span> Response</span>
-           <br> <br>   
+             
  <sub  >
   
    {<br>
@@ -945,7 +942,7 @@ No enough balance in wallet<br>
 <div id='right-imps'  class="col-lg-3 respo imps hide">
 
   <div class="sidebar neft ">
-    post/api/NEFT
+    post/api/imps transfer
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -956,15 +953,15 @@ No enough balance in wallet<br>
 <sub>
 
 
-{<br>
-"username":"haryy23",   <br>
-"password":"123@#$",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "AWE3R", <br>
-"amount": 5000 ,<br>
-
-}
-
+  {<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
+  
+    } 
+ 
 
 </sub>
 
@@ -978,22 +975,20 @@ No enough balance in wallet<br>
 
   <div id="200" class="sidebar 200-neft-error " >
    
-    <span> Response</span>
- <br> <br>  
+  
 
 <sub  >
 
 
-{<br>
-
-"username": "email",  <br>
-"key": "hashkey",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "188787987878"<br>
-"amount": "100.00"<br>
-
-}  
-
+  {<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
+  
+    } 
+ 
 
 </sub>
 
@@ -1005,17 +1000,16 @@ No enough balance in wallet<br>
 
   <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
    
-    <span> Response</span>
- <br> <br>   
+   
 <sub  >
 
-{<br>
+ {<br>
 
-"flag": false, <br>
-"data": "", <br>
-"message": "Unauthorized Access",<br>
-"code": 0 <br>
-} 
+    "flag": false, <br>
+    "data": "", <br>
+    "message": "Unauthorized Access",<br>
+    "code": 0 <br>
+  }
 </sub>  </div><!-- End sidebar -->
 
   
@@ -1047,7 +1041,7 @@ No enough balance in wallet<br>
 <div id='right-upi' class="col-lg-3 respo  upi hide">
 
   <div class="sidebar neft ">
-    post/api/NEFT
+    post/api/upi transfer
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -1058,15 +1052,15 @@ No enough balance in wallet<br>
 <sub>
 
 
-{<br>
-"username":"haryy23",   <br>
-"password":"123@#$",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "AWE3R", <br>
-"amount": 5000 ,<br>
-
-}
-
+  {<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
+  
+    } 
+ 
 
 </sub>
 
@@ -1080,21 +1074,20 @@ No enough balance in wallet<br>
 
   <div id="200" class="sidebar 200-neft-error " >
    
-    <span> Response</span>
- <br> <br>  
+ 
 
 <sub  >
 
 
-{<br>
-
-"username": "email",  <br>
-"key": "hashkey",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "188787987878"<br>
-"amount": "100.00"<br>
-
-}  
+  {<br>
+    "username": "email",   <br>
+    "key": "hashkey", <br>
+    "account_no": ": "1287787877",<br>
+    "ifsc_code": "188787987878" <br>
+    "amount": "100.00"<br>
+  
+    } 
+  
 
 
 </sub>
@@ -1107,8 +1100,7 @@ No enough balance in wallet<br>
 
   <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
    
-    <span> Response</span>
- <br> <br>   
+     
 <sub  >
 
 {<br>
@@ -1149,7 +1141,7 @@ No enough balance in wallet<br>
 <div id='right-payment' class="col-lg-3 respo  payment hide">
 
   <div class="sidebar neft ">
-    post/api/NEFT
+    post/api/paytm wallet
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -1161,11 +1153,10 @@ No enough balance in wallet<br>
 
 
 {<br>
-"username":"haryy23",   <br>
-"password":"123@#$",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "AWE3R", <br>
-"amount": 5000 ,<br>
+  "username": "email",   <br>
+  "key": "Paytm Number", <br>
+  "beneficiaryPhoneNo": ": "test@citruxpay", <br>
+ "amount": 5000 ,<br>
 
 }
 
@@ -1181,22 +1172,18 @@ No enough balance in wallet<br>
 
 
   <div id="200" class="sidebar 200-neft-error " >
-   
-    <span> Response</span>
- <br> <br>  
-
+ 
 <sub  >
 
 
-{<br>
 
-"username": "email",  <br>
-"key": "hashkey",  <br>
-"account_no": "1234569", <br>
-"ifsc_code": "188787987878"<br>
-"amount": "100.00"<br>
-
-}  
+  {<br>
+    "username": "email",   <br>
+    "key": "Paytm Number", <br>
+    "beneficiaryPhoneNo": ": "test@citruxpay", <br>
+   "amount": 5000 ,<br>
+  
+  }  
 
 
 </sub>
@@ -1208,9 +1195,7 @@ No enough balance in wallet<br>
    </div><!-- End sidebar -->
 
   <div id="user-not-found" class="sidebar 200-neft-error response-msg" >
-   
-    <span> Response</span>
- <br> <br>   
+    
 <sub  >
 
 {<br>
