@@ -211,7 +211,7 @@
             <h3>Responses</h3>  
 <hr>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
   <div class="card-body">
     <code>
     URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
@@ -371,7 +371,7 @@ No enough balance in wallet<br>
   <h3>Responses</h3>  
 <hr>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
 <div class="card-body">
 <code>
 URL("https://app.citruxpay.com/api/v2/imps-transfer/" <br>
@@ -522,7 +522,7 @@ No enough balance in wallet<br>
   <h3>Responses</h3>  
 <hr>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
 <div class="card-body">
 <code>
 URL("https://app.citruxpay.com/api/v2/upi-transfer/"<br>
@@ -674,7 +674,7 @@ No enough balance in wallet<br>
   <h3>Responses</h3>  
 <hr>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
 <div class="card-body">
 <code>
 URL("https://app.citruxpay.com/api/v2/paytm-transfer/" <br>
@@ -756,7 +756,7 @@ No enough balance in wallet<br>
 
           <div id='right-neft'  class="col-lg-3 respo   neft">
 
-            <div data-aos="fade-up-right" class="sidebar neft ">
+            <div data-aos="fade-down-right"  class="sidebar neft ">
               post/api/neft
             
             </div><!-- End sidebar -->
@@ -858,11 +858,11 @@ No enough balance in wallet<br>
 
 <div id='right-imps'  class="col-lg-3 respo imps hide">
 
-  <div data-aos="fade-up-right" class="sidebar neft ">
+  <div data-aos="fade-right" class="sidebar neft ">
     post/api/impsTransfer
   
   </div><!-- End sidebar -->
-  <div class="sidebar">
+  <div data-aos="fade-left" class="sidebar">
    Content Type  <br>
    
   
@@ -1146,7 +1146,7 @@ No enough balance in wallet<br>
 
 
 <div class="container-fluid row table-container">
-  <div class="col-sm-12 col-md-6">
+  <div data-aos="fade-up"  class="col-sm-12 col-md-6">
 <h2>IMPS Transfer</h2>
     <table class="table table-striped">
       
@@ -1175,7 +1175,7 @@ No enough balance in wallet<br>
       </tbody>
     </table>
 
-<div class="card">
+<div  data-aos="fade-up"  class="card">
   <div class="card-body">
     <code>
     URL("https://app.citruxpay.com/api/v2/imps-transfer/" <br>
@@ -1236,7 +1236,7 @@ No enough balance in wallet<br>
 
 
 
-    <div   class="col-sm-12 col-md-6 code-res">
+    <div    data-aos="fade-down" class="col-sm-12 col-md-6 code-res">
      <h3 style="color:rgb(17, 59, 78); font-family: 'Kaisei HarunoUmi', serif;">Request</h3> 
      
       <div class="sidebar  p-4">
@@ -1307,7 +1307,7 @@ Account No          </th>
       </tbody>
     </table>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
   <div class="card-body">
     <code>
     URL("https://app.citruxpay.com/api/v2/neft-transfer/" <br>
@@ -1433,7 +1433,7 @@ No enough balance in wallet<br>
       </tbody>
     </table>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
   <div class="card-body">
     <code>
     URL("https://app.citruxpay.com/api/v2/upi-transfer/" <br>
@@ -1526,8 +1526,8 @@ No enough balance in wallet<br>
 </div>
 
 
-<div class="container-fluid row mt-4 table-container">
-  <div class="col-sm-12 col-md-6">
+<div  class="container-fluid row mt-4 table-container">
+  <div data-aos="fade-down" class="col-sm-12 col-md-6">
 <h2>PAYTM Transfer</h2>
     <table class="table table-striped">
       
@@ -1559,7 +1559,7 @@ No enough balance in wallet<br>
       </tbody>
     </table>
 
-<div class="card">
+<div data-aos="fade-up" class="card">
   <div class="card-body">
     <code>
     URL("https://app.citruxpay.com/api/v2/paytm-transfer/",<br>
@@ -1799,6 +1799,7 @@ No enough balance in wallet<br>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
+      offset:100,
       duration:2000,
     });
 
