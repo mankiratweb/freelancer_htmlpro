@@ -2492,5 +2492,45 @@ section {
   display: none;
 }
 .neft{
-  /* display: block; */
+  display: block;
 }
+
+.table-container{
+  display: none;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px)  {
+  .main-blog-row div{
+    display: none;
+  }
+
+  .table-container{
+    display: flex;
+
+  }
+
+  .code-res{
+    
+  }
+   
+}
+
+
+
+
+
+
+
