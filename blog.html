@@ -23,6 +23,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -106,8 +107,8 @@
             <nav id="navbar"  class="navbar">
               <ul>
              
-                <li><a class="nav-link scrollto" href="#about">IMPS TRANSFER</a></li>
-                <li><a class="nav-link scrollto" href="#services">NEFT TRANSFER</a></li>
+                <li><a class="nav-link scrollto" href="#">NEFT TRANSFER</a></li>
+                <li><a class="nav-link scrollto" href="#" onclick="impsTransfer()" >IMPS TRANSFER</a></li>
                 <li><a class="nav-link scrollto" href="#portfolio">UPI TRANSFER</a></li>
                 <li><a class="nav-link scrollto" href="#team">PAYTM TRANSFER</a></li>
                 <li><a class="active" href="blog.html">PAYTM WALLET</a></li> 
@@ -122,7 +123,11 @@
           </div>
           <div class="col-lg-7 entries">
          
-            <div class="col-lg-6 left-div">
+            <div class="row ">
+              
+            <div style="color: rgba(38, 50, 56, 0.5);" class="col-lg-6 left-div">
+             <strong>HEADER PARAMETERS</strong> 
+              <hr>
               <p>Authorization</p> 
             <span calss="required">
               required
@@ -133,37 +138,39 @@
                 required
               </span>
            <br><br><br>
-
-          <p>username</p> 
+           REQUEST BODY SCHEMA: application/json
+           <hr>
+          <p>Username</p> 
               <span calss="required">
                 required
               </span>
-          <p>password</p> 
+          <p>Password</p> 
               <span calss="required">
                 required
               </span>
-          <p>account_no</p> 
+          <p>Account_no</p> 
               <span calss="required">
                 required
               </span>
-          <p>ifsc_code</p> 
+          <p>Ifsc_code</p> 
               <span calss="required">
                 required
               </span>
-          <p>amount</p> 
+          <p>Amount</p> 
               <span calss="required">
                 required
               </span>
             </div>
-            <div class="col-lg-6 right-dev">
+            <div class="col-lg-6 right-dev"><br>
+              <hr>
               <span>String</span>
              <p>API Token value from 'Settings'</p>  
              <hr>
               <span>String</span>
               <p>Example: application/json</p>  
           
-             <hr> <br><br>
-              
+         
+             <hr style="margin-top: 124px;">
              <span>String</span>
              <p>Example: haryy23</p>  
          
@@ -185,8 +192,103 @@
              <hr>
 
             </div>
+
+            </div>
+
+            <div class="row m-2">
+            <h3>Responses</h3>  
+<hr>
+
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        200 Successful operation
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <span style="color:rgb(160, 156, 156)">RESPONSE SCHEMA: </span>application/json 
+    
+      <div class="accordion-body row">
+          
+       
+        <div class='col-lg-4'>
+<br>
+
+<p class="font-weight:bold"> success</p><br>
+<p class="font-weight:bold"> message</p><br>
+<p  id='data-hov' class="font-weight:bold "> <a onclick='dataGov()'> data <i class='fas fa-angle-down' style='font-size:36px ; color:green'></i></a></p><br><br>
+ 
+<div id='data-respo-key' class="row pl-4 data-respo">
+  
+    <p class="font-weight:bold m-4"> Username</p><br>
+    <p class="font-weight:bold m-4"> Password</p><br>
+    <p class="font-weight:bold m-4"> Account_no</p><br>
+    <p class="font-weight:bold m-4"> Ifsc_code</p><br>
+    <p class="font-weight:bold m-4"> Amount</p><br>
+ 
+ 
+</div>
+
+
+
+
+
+        </div>
+        <div class='col-lg-5'>
+ <br>
+<p class="font-weight:bold"> boolean</p>
+<hr>
+<p class="font-weight:bold"> String</p>
+<hr>
+<p class="font-weight:bold"> Object</p>
+<hr>
+
+<div id="data-respo-val" class="row pl-4 data-respo">
+  <br><br>
+  <p class="font-weight:bold m-4">String</p><hr><br>
+  <p class="font-weight:bold m-4"> string</p><hr><br>
+  <p class="font-weight:bold m-4"> int</p><hr>
+  <p class="font-weight:bold m-4"> String</p><hr>
+  <p class="font-weight:bold m-4">int</p><hr>
+
+
+</div>
+
+        </div>
+        
+        
+        
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        404 Unable to find transaction
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
+
+            </div>
+
            
-             <hr>
+       
            
      
 
@@ -207,11 +309,11 @@
 
 
   {<br>
-    "username":"{Username}",   <br>
-    "password":"{Password}",  ,<br>
-    "account_no": "{account no}", <br>
-    "ifsc_code": "{ifsc code}" <br>
-     "amount":amount <br>
+    "username":"haryy23",   <br>
+    "password":"123@#$",  <br>
+    "account_no": "1234569", <br>
+    "ifsc_code": "AWE3R", <br>
+     "amount": 5000 ,<br>
   
     }
 
@@ -223,12 +325,12 @@
 
 
             </div><!-- End sidebar -->
-            <button type="button" class="btn btn-danger" onclick="successfull()">Success</button> <button type="button" class="btn btn-danger" onclick="notFound()">user not found </button> <br>
-           <br> <button type="button" class="btn btn-danger" onclick="pswrdMismatch()">password mismatch</button> <button type="button" class="btn btn-danger" onclick="sameTrans()">Same transaction</button>
+            <button type="button" class="btn btn-success" onclick="successfull()">200</button> <button type="button" class="btn btn-danger" onclick="notFound()">404 </button> <br>
+           <br> <button type="button" class="btn btn-danger" onclick="pswrdMismatch()">401</button> <button type="button" class="btn btn-danger" onclick="sameTrans()">Same transaction</button>
       <br>     <br> <button type="button" class="btn btn-danger" onclick="noEnough()"> No enough balance </button> <button type="button" class="btn btn-danger" onclick="error()">Error occured</button>
 
 
-            <div id="200" class="sidebar 200-neft-error response-msg" >
+            <div id="200" class="sidebar 200-neft-error  " >
              
               <span> Response</span>
            <br> <br>  
@@ -239,14 +341,14 @@
    {<br>
 
     "flag": true, <br>
-    "data": { <br>
-      "status": "PENDING",   <br>
-      "transaction_ref_no": "1287787877",<br>
-      "order_id": "188787987878", <br>
-      "total_amount": 100, <br>
-      "created_at": "2020-12-08 11:07:26", <br>
-   
-    }, 
+    "data":   {<br>
+      "username":"haryy23",   <br>
+      "password":"123@#$",  <br>
+      "account_no": "1234569", <br>
+      "ifsc_code": "AWE3R", <br>
+       "amount": 5000 ,<br>
+    
+      } ,<br>
   
     "message": "{message}", <br>
     "code": 1 <br>
@@ -271,7 +373,7 @@
 
     "flag": false, <br>
     "data": "", <br>
-    "message": "Unauthorized Access.",<br>
+    "message": "Unauthorized Access",<br>
     "code": 0 <br>
   } 
  </sub>  </div><!-- End sidebar -->
@@ -286,7 +388,7 @@
 
     "flag": false, <br>
     "data": "", <br> 
-    "message": "user password mismatch.",<br>
+    "message": "user password mismatch",<br>
     "code": 0 <br>
   } 
  </sub>  </div><!-- End sidebar -->
@@ -360,6 +462,8 @@
 
 
           </div><!-- End blog sidebar -->
+
+          
 
         </div>
 
