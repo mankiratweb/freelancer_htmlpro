@@ -379,6 +379,10 @@ function neftTrans(){
 
 document.getElementById('right-neft').style.display='block';
 document.getElementById('center-neft').style.display='block';
+document.getElementById('neft-a-active').classList.add('active');
+document.getElementById('pay-a-active').classList.remove('active');
+document.getElementById('upi-a-active').classList.remove('active');
+document.getElementById('imps-a-active').classList.remove('active');
    
 document.getElementById('center-imps').style.display='none';
 document.getElementById('right-imps').style.display='none';
@@ -398,7 +402,10 @@ function impsTransfer(){
 
   document.getElementById('center-imps').style.display='block';
   document.getElementById('right-imps').style.display='block';
-
+  document.getElementById('imps-a-active').classList.add('active');
+  document.getElementById('pay-a-active').classList.remove('active');
+  document.getElementById('neft-a-active').classList.remove('active');
+  document.getElementById('upi-a-active').classList.remove('active');
 
 
 
@@ -420,6 +427,10 @@ function upiTrans(){
 
   document.getElementById('center-upi').style.display='block';
   document.getElementById('right-upi').style.display='block';
+  document.getElementById('upi-a-active').classList.add('active');
+  document.getElementById('neft-a-active').classList.remove('active');
+  document.getElementById('pay-a-active').classList.remove('active');
+  document.getElementById('imps-a-active').classList.remove('active');
  
   document.getElementById('center-payment').style.display='none';
   document.getElementById('right-payment').style.display='none';
@@ -440,7 +451,10 @@ function paymentWal(){
 
   document.getElementById('center-payment').style.display='block';
   document.getElementById('right-payment').style.display='block';
-
+  document.getElementById('pay-a-active').classList.add('active');
+  document.getElementById('neft-a-active').classList.remove('active');
+  document.getElementById('upi-a-active').classList.remove('active');
+  document.getElementById('imps-a-active').classList.remove('active');
 
   document.getElementById('center-upi').style.display='none';
   document.getElementById('right-upi').style.display='none';

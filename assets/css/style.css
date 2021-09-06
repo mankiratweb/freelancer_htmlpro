@@ -2477,6 +2477,12 @@ section {
 .main-blog-row .col-lg-2 nav ul li a:hover{
   color:rgb(211, 83, 51);
 }
+.main-blog-row .col-lg-2 nav ul li a.active{
+  color: rgb(175, 56, 9); 
+  
+ }
+  
+ 
 .accordion-body .col-lg-4 .data-respo ,.accordion-body .col-lg-5 .data-respo{
   display: none;
 }
@@ -2514,7 +2520,6 @@ section {
 
 
 
-
 @media (max-width: 1000px)  {
   .main-blog-row div{
     display: none;
@@ -2525,10 +2530,7 @@ section {
 
   }
 
-  .code-res{
-    
-  }
-   
+  
 }
 
 

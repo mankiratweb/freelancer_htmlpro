@@ -109,11 +109,11 @@
             <nav id="navbar"  class="navbar">
               <ul>
              
-                <li><a style="padding-left:0!important;" class="nav-link scrollto" onclick="neftTrans()">NEFT TRANSFER</a></li>
-                <li><a style="padding-left:0!important;"  class="nav-link scrollto"   onclick="impsTransfer()" >IMPS TRANSFER</a></li>
-                <li><a style="padding-left:0!important;"  class="nav-link scrollto"  onclick="upiTrans()">UPI TRANSFER</a></li>
+                <li><a style="padding-left:0!important;" id='neft-a-active' class="nav-link  scrollto" onclick="neftTrans()">NEFT TRANSFER</a></li>
+                <li><a style="padding-left:0!important;"  id='imps-a-active' class="nav-link scrollto"   onclick="impsTransfer()" >IMPS TRANSFER</a></li>
+                <li><a style="padding-left:0!important;" id='upi-a-active' class="nav-link scrollto"  onclick="upiTrans()">UPI TRANSFER</a></li>
             
-                <li><a style="padding-left:0!important;"  class="active" onclick="paymentWal()">PAYTM WALLET</a></li> 
+                <li><a style="padding-left:0!important;" id='pay-a-active' class="nav-link scrollto" onclick="paymentWal()">PAYTM WALLET</a></li> 
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -755,7 +755,7 @@ No enough balance in wallet<br>
           <div id='right-neft'  class="col-lg-3 respo   neft">
 
             <div class="sidebar neft ">
-              post/api/NEFT
+              post/api/neft
             
             </div><!-- End sidebar -->
             <div class="sidebar">
@@ -767,8 +767,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     }
@@ -796,8 +796,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     } 
@@ -856,7 +856,7 @@ No enough balance in wallet<br>
 <div id='right-imps'  class="col-lg-3 respo imps hide">
 
   <div class="sidebar neft ">
-    post/api/imps transfer
+    post/api/impsTransfer
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -870,8 +870,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     } 
@@ -898,8 +898,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     } 
@@ -956,7 +956,7 @@ No enough balance in wallet<br>
 <div id='right-upi' class="col-lg-3 respo  upi hide">
 
   <div class="sidebar neft ">
-    post/api/upi transfer
+    post/api/upiTransfer
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -967,8 +967,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     } 
@@ -995,8 +995,8 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "hashkey", <br>
-    "account_no": ": "1287787877",<br>
-    "ifsc_code": "188787987878" <br>
+    "account_no":  "1287787877",<br>
+     "ifsc_code": "188787987878", <br>
     "amount": "100.00"<br>
   
     } 
@@ -1054,7 +1054,7 @@ No enough balance in wallet<br>
 <div id='right-payment' class="col-lg-3 respo  payment hide">
 
   <div class="sidebar neft ">
-    post/api/paytm wallet
+    post/api/paytmWallet
   
   </div><!-- End sidebar -->
   <div class="sidebar">
@@ -1066,7 +1066,7 @@ No enough balance in wallet<br>
 {<br>
   "username": "email",   <br>
   "key": "Paytm Number", <br>
-  "beneficiaryPhoneNo": ": "test@citruxpay", <br>
+  "beneficiaryPhoneNo": "test@citruxpay", <br>
  "amount": 5000 ,<br>
 
 }
@@ -1092,7 +1092,7 @@ No enough balance in wallet<br>
   {<br>
     "username": "email",   <br>
     "key": "Paytm Number", <br>
-    "beneficiaryPhoneNo": ": "test@citruxpay", <br>
+    "beneficiaryPhoneNo": "test@citruxpay", <br>
    "amount": 5000 ,<br>
   
   }  
@@ -1248,8 +1248,8 @@ No enough balance in wallet<br>
       {<br>
         "username": "email",   <br>
         "key": "hashkey", <br>
-        "account_no": ": "1287787877",<br>
-        "ifsc_code": "188787987878" <br>
+        "account_no":  "1287787877",<br>
+         "ifsc_code": "188787987878", <br>
         "amount": "100.00"<br>
       
         } 
@@ -1379,8 +1379,8 @@ No enough balance in wallet<br>
       {<br>
         "username": "email",   <br>
         "key": "hashkey", <br>
-        "account_no": ": "1287787877",<br>
-        "ifsc_code": "188787987878" <br>
+        "account_no":  "1287787877",<br>
+         "ifsc_code": "188787987878", <br>
         "amount": "100.00"<br>
       
         } 
