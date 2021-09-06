@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="assets/css/style-api.css">
 
 
+<!-- Aos Start  -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
  
 
@@ -104,16 +106,16 @@
 
         <div class="row main-blog-row">
          
-          <div class="col-lg-2 ">
+          <div  class="col-lg-2 ">
 
             <nav id="navbar"  class="navbar">
               <ul>
              
-                <li><a style="padding-left:0!important;" id='neft-a-active' class="nav-link  scrollto" onclick="neftTrans()">NEFT TRANSFER</a></li>
-                <li><a style="padding-left:0!important;"  id='imps-a-active' class="nav-link scrollto"   onclick="impsTransfer()" >IMPS TRANSFER</a></li>
-                <li><a style="padding-left:0!important;" id='upi-a-active' class="nav-link scrollto"  onclick="upiTrans()">UPI TRANSFER</a></li>
+                <li><a data-aos="fade-left"  style="padding-left:0!important;" id='neft-a-active' class="nav-link  scrollto" onclick="neftTrans()">NEFT TRANSFER</a></li>
+                <li><a data-aos="fade-right" style="padding-left:0!important;"  id='imps-a-active' class="nav-link scrollto"   onclick="impsTransfer()" >IMPS TRANSFER</a></li>
+                <li><a data-aos="fade-left" style="padding-left:0!important;" id='upi-a-active' class="nav-link scrollto"  onclick="upiTrans()">UPI TRANSFER</a></li>
             
-                <li><a style="padding-left:0!important;" id='pay-a-active' class="nav-link scrollto" onclick="paymentWal()">PAYTM WALLET</a></li> 
+                <li><a data-aos="fade-right" style="padding-left:0!important;" id='pay-a-active' class="nav-link scrollto" onclick="paymentWal()">PAYTM WALLET</a></li> 
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -754,14 +756,14 @@ No enough balance in wallet<br>
 
           <div id='right-neft'  class="col-lg-3 respo   neft">
 
-            <div class="sidebar neft ">
+            <div data-aos="fade-up-right" class="sidebar neft ">
               post/api/neft
             
             </div><!-- End sidebar -->
-            <div class="sidebar">
+            <div data-aos="fade-left"  class="sidebar">
              Content Type <br>   
 
-<sub>
+<sub  >
 
 
   {<br>
@@ -781,11 +783,12 @@ No enough balance in wallet<br>
 
 
             </div><!-- End sidebar -->
-            <button type="button" class="btn btn-success" onclick="successfullNeft()">Response</button> 
-            <button type="button" class="btn btn-danger" onclick="notFoundNeft()">Error </button> <br>
+            <button data-aos="fade-up-left" type="button" class="btn btn-success" onclick="successfullNeft()">Response</button> 
+            <button data-aos="fade-up-right" type="button" class="btn btn-danger" onclick="notFoundNeft()">Error </button> <br>
        
 
-            <div id="200-neft" class="sidebar 200-neft-error " >
+         
+            <div data-aos="fade-down-right"  id="200-neft" class="sidebar 200-neft-error " >
              
                
             
@@ -855,7 +858,7 @@ No enough balance in wallet<br>
 
 <div id='right-imps'  class="col-lg-3 respo imps hide">
 
-  <div class="sidebar neft ">
+  <div data-aos="fade-up-right" class="sidebar neft ">
     post/api/impsTransfer
   
   </div><!-- End sidebar -->
@@ -955,7 +958,7 @@ No enough balance in wallet<br>
 
 <div id='right-upi' class="col-lg-3 respo  upi hide">
 
-  <div class="sidebar neft ">
+  <div data-aos="fade-up-right" class="sidebar neft ">
     post/api/upiTransfer
   
   </div><!-- End sidebar -->
@@ -1053,7 +1056,7 @@ No enough balance in wallet<br>
 
 <div id='right-payment' class="col-lg-3 respo  payment hide">
 
-  <div class="sidebar neft ">
+  <div data-aos="fade-up-right" class="sidebar neft ">
     post/api/paytmWallet
   
   </div><!-- End sidebar -->
@@ -1787,6 +1790,23 @@ No enough balance in wallet<br>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+
+<!-- AOS  Start -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:2000,
+    });
+
+  </script>
+
+<!-- AOS End  -->
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
